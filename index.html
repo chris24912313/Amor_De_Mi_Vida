@@ -112,7 +112,6 @@
         var hold = 1;
 
         canvas.click(function(e) {
-            document.getElementById("myAudio").play();  
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
@@ -121,6 +120,7 @@
                 canvas.unbind("click");
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
+                document.getElementById("myAudio").play();  
             }
         }).mousemove(function(e){
             var offset = canvas.offset(), x, y;
