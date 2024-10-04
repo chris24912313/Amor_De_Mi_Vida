@@ -48,7 +48,7 @@
                 </div>
                 <canvas id="canvas" width="1920" height="1360"></canvas>
             </div>
-            <audio loop src="love.mp3" autoplay="autoplay"></audio>
+            <audio loop id="myAudio" src="love.mp3" autoplay="autoplay"></audio>
         </div>
     
     <script>
@@ -111,6 +111,7 @@
         var hold = 1;
 
         canvas.click(function(e) {
+            document.getElementById("myAudio").play();  
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
