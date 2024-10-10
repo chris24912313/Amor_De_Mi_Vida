@@ -52,33 +52,12 @@ function timeElapse(date) {
                                ("0" + current.getMinutes()).slice(-2) + ":" + 
                                ("0" + current.getSeconds()).slice(-2);
 
-    console.log("Fecha actual: " + currentDateFormatted); // Mostrar en consola la fecha actual
-
-    // Calcular la diferencia en segundos
-    var seconds = (current - startDate) / 1000;
-
-    // Calcular días, horas, minutos y segundos
-    var days = Math.floor(seconds / (3600 * 24));
-    seconds = seconds % (3600 * 24);
-    
-    var hours = Math.floor(seconds / 3600);
-    if (hours < 10) {
-        hours = "0" + hours;
-    }
-    
-    seconds = seconds % 3600;
-    var minutes = Math.floor(seconds / 60);
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    
-    seconds = seconds % 60;
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-
+   
     // Crear el resultado con la fecha actual
     var result = "<span class=\"digit\">" + currentDateFormatted ; 
     $("#clock").html(result); // Mostrar en el HTML
 }
 
+window.onload = function() {
+    window.scrollTo(0, document.body.scrollHeight);
+  };

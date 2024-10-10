@@ -1,9 +1,9 @@
-body{margin:0;padding:0;background:#ffe;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
+body{margin:0;padding:0;background:#ffe;height: 100%; width: 100%; font-size:14px;color:#231F20;overflow-y: hidden;}
 a {color:#000;font-size:14px;}
 #main{width:100%;}
 #wrap{position:relative;margin:0 auto;width:1100px;height:680px;}
-#text{width:400px;height:425px;left:60px;top:80px;position:absolute;}
-#code{display:none;font-size:16px;}
+#text{position:absolute;}
+#code{display:none;font-size:1.18rem;}
 #clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
 #clock-box a {font-size:28px;text-decoration:none;}
 #clock{margin-left:0px;}
@@ -13,3 +13,33 @@ a {color:#000;font-size:14px;}
 .hand{cursor:pointer;}
 .say{margin-left:5px;}
 .space{margin-right:150px;}
+.caja-texto {
+    top:9% ;
+    width: 45%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+  }
+
+.contenedor-completo {
+    height: 100%;
+    width: 100%;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+  /* Estilos para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #code {
+        font-size:1.071rem;
+        padding-left:2%;
+    }
+}
+  
+  /* Estilos para pantallas grandes (desktops) */
+@media (min-width: 992px) {
+    #code {
+        font-size:1.18rem;
+    }
+}
